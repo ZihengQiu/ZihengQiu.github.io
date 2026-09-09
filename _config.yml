@@ -6,20 +6,19 @@ title: Ziheng Qiu # the website title (if blank, full name will be used instead)
 first_name: Ziheng
 last_name: Qiu
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the best way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Ziheng Qiu is a Ph.D. student at Fudan University working on embodied AI, robot manipulation, and visuomotor policy learning.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: embodied AI, robot manipulation, robot learning, visuomotor policy, physical AI
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 url: https://zihengqiu.github.io
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -35,7 +34,7 @@ repo_theme_dark: dark # https://github.com/stats-organization/github-stats-exten
 # `user@host` and no `mailto:` for harvesters to scrape, and clicking one copies
 # it to the clipboard instead of opening a mail client.
 # See "Protecting email addresses from scrapers" in docs/CUSTOMIZE.md.
-protect_email: false
+protect_email: true
 
 # Off by default: the free public github-profile-trophy instance is disabled
 # (its Vercel deployment answers HTTP 402 / DEPLOYMENT_DISABLED), so every trophy
@@ -135,8 +134,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Ziheng Qiu # blog_name will be displayed in your blog page
+blog_description: Notes on embodied AI and robot learning.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -165,24 +164,14 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -229,6 +218,10 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - _books/
+  - _news/
+  - _posts/
+  - _teachings/
   - AGENTS.md
   - al-folio-upgrade-report.md
   - bin/
@@ -244,6 +237,41 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/blog.md
+  - _pages/books.md
+  - _pages/dropdown.md
+  - _pages/news.md
+  - _pages/plugins.md
+  - _pages/profiles.md
+  - _pages/repositories.md
+  - _pages/teaching.md
+  - assets/audio/
+  - assets/bibliography/
+  - assets/html/
+  - assets/img/1.jpg
+  - assets/img/2.jpg
+  - assets/img/3.jpg
+  - assets/img/4.jpg
+  - assets/img/5.jpg
+  - assets/img/6.jpg
+  - assets/img/7.jpg
+  - assets/img/8.jpg
+  - assets/img/9.jpg
+  - assets/img/10.jpg
+  - assets/img/11.jpg
+  - assets/img/12.jpg
+  - assets/img/book_covers/
+  - assets/img/prof_pic.jpg
+  - assets/img/prof_pic_color.png
+  - assets/img/publication_preview/
+  - assets/img/rhino.png
+  - assets/img/template_error.png
+  - assets/jupyter/
+  - assets/json/
+  - assets/pdf/example_pdf.pdf
+  - assets/plotly/
+  - assets/rendercv/rendercv_output/
+  - assets/video/
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -265,7 +293,6 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
-  - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
@@ -355,8 +382,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Qiu]
+  first_name: [Ziheng, Z.]
 
   style: apa
   locale: en
