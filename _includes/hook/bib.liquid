@@ -5,12 +5,22 @@
     text-decoration: none;
   }
 
-  {% if entry.equal_contribution %}
-  #{{ entry.key }} .author em::after {
-    content: "†";
+  #{{ entry.key }} .equal-contribution-mark {
     vertical-align: super;
     font-size: 0.7em;
     line-height: 0;
   }
-  {% endif %}
+
 </style>
+
+{% if entry.equal_contribution %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var author = document.querySelector("#{{ entry.key }} .author");
+    if (!author) return;
+    author.innerHTML = author.innerHTML
+      .replace("Qingda Hu", "Qingda Hu<sup class=\"equal-contribution-mark\">†</sup>")
+      .replace("Ziheng Qiu", "Ziheng Qiu<sup class=\"equal-contribution-mark\">†</sup>");
+  });
+</script>
+{% endif %}
