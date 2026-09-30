@@ -1,0 +1,16 @@
+<style>
+  .author em {
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  {% if entry.equal_contribution %}
+  #{{ entry.key }} .author em::after {
+    content: "†";
+    vertical-align: super;
+    font-size: 0.7em;
+    line-height: 0;
+  }
+  {% endif %}
+</style>

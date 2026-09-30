@@ -430,6 +430,7 @@ filtered_bibtex_keywords:
     code,
     dimensions,
     eprint,
+    equal_contribution,
     google_scholar_id,
     hal,
     html,
